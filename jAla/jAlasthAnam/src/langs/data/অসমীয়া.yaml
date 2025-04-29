@@ -1,0 +1,19 @@
+main:
+  title:
+    - লিপি লেখিকা
+    - সম্পূৰ্ণ গতি আৰু শুদ্ধতাৰ সৈতে ভাৰতীয় ভাষা টাইপ কৰক
+  description: সম্পূৰ্ণ গতি আৰু শুদ্ধতাৰ েৰে ভাৰতীয় ভাষা টাইপ কৰিবলৈ সঁজুলি
+  features:
+    name: বৈশিষ্টসমূহ
+    lekhan_sahayika:
+      title: লেখান সহায়িকা
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ধ্বনিগত ব্যৱহাৰ তালিকা
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: সকলো ব্ৰহ্মিক লিপি সমৰ্থন কৰক
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: লিপি পৰিয়ালতক
+      lekh_md: (features.parivartak)

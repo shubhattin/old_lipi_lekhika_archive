@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lipi Lekhika | ⌨️🇮🇳 Languages</title>
+    <link rel="stylesheet" type="text/css" href="src/main.css">
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" type="image/png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/png" />
+    <script src="src/dattAMsh.js"></script>
+    <script src="src/main.js"></script>
+    <script src="eel.js"></script>
+</head>
+
+<!-- शुभमानन्दगुप्तेन भारते रचितः -->
+
+<body id="main_section" onclick="mukhya.clear_all_val();">
+    <img class="btn" onclick="change_page('main');" src="img/main.png">
+    <img class="btn" onclick="change_page('prayog');" src="img/usage.png">
+    <img class="btn" onclick="change_page('about');" src="img/about.png" id="about_button">
+    <img src="img/lang.png">
+    <select id="app_lang"
+        onchange="mukhya.set_lang_data();set_font_size(mukhya.font_size+mukhya.lang_data['size']);set_lang_text(true);">
+        <option value="en" id="en"></option>
+        <option value="hi" id="hin"></option>
+        <option value="sa" id="san"></option>
+    </select><br>
+    <div id="only_web">
+        <img src="img/download.png">
+        <a href="https://rebrand.ly/bkz9q07" target="_blank"><img src="img/home.gif"></a>
+        <img src="img/close.png"
+            onclick="get_element('only_web').remove();get_element('avAharaNam').remove();"><br>
+        <img src="img/android.png" class="av" onclick="download(0);">&nbsp;
+        <img src="img/windows.png" class="av" onclick="download(1);">
+    </div>
+    <iframe id="avAharaNam"></iframe><div id="bdy"></div>
+</body>
+<div id="main">
+    <label id="supported_lang"></label><br>
+    <input type="radio" name="praNAlyaH" id="in1" onclick="change_mode('auto');" checked=1>
+    <label id="lbl1" for="in1" class="mode_selector" onclick="change_mode('auto');"></label>
+    <input type="radio" name="praNAlyaH" id="in3" onclick="change_mode('inter');">
+    <label id="lbl3" for="in3" class="mode_selector" onclick="change_mode('inter');"></label>
+    <br><div id="mode"></div>
+</div>
+<div id="prayog">
+    <select class="lang" id="xcv"
+        onchange="get_element('image').src='img\\'+(['Sanskrit', 'Marathi', 'Nepali', 'Konkani'].includes(this.value) ? 'Hindi' : this.value) + '.gif';">
+    </select><br><img id="image" />
+</div>
+<div id="about">
+    <br><div style="font-size: 20px;color: red;font-weight: bold;" id="develop"></div>
+    <p id="about_text"></p><p id="paricaya"></p>
+</div>
+<div id="auto">
+    <div id="sa_mode">
+        <label id="sa_text"></label>
+        <input type="radio" name="sanskrit" id="sa_04" onclick="mukhya.sa_lang=0;"></input>
+        <label for="sa_04" id="sa_0"></label>
+        <input type="radio" name="sanskrit" id="sa_14" onclick="mukhya.sa_lang=1;"></input>
+        <label for="sa_14" id="sa_1"></label>
+    </div>
+    <label id="lang_select" for="dynamic" class="lang_lbl"></label>
+    <select class="lang" id="main_lang_selector"
+        onchange="mukhya.set_lang(this.value,false,false,true);">
+    </select>&nbsp;&nbsp;&nbsp;<img class="cpy_btn" onclick="copy_text('dynamic');" src="img/copy.png"><br>
+    <textarea id="dynamic" oninput="mukhya.mukhya(this,event);" spellcheck="false"></textarea>
+    <br><label id="ins"></label>
+</div>
+<div id="inter">
+    <select class="lang" id="lang1"
+        onchange="mukhya.scripts[0]=this.value;mukhya.antarparivartan('lang2',true);">
+    </select>&nbsp;&nbsp;<button id="set_text2" class="set_text" onclick="set_inter_values('lang1');"></button>
+    &nbsp;&nbsp;<img class="cpy_btn" onclick="copy_text('first');" src="img/copy.png">
+    <br><textarea id="first" oninput="mukhya.antarparivartan('lang1');" class="normal" spellcheck="false"></textarea>
+    <br><select class="lang" id="lang2"
+        onchange="mukhya.scripts[1]=this.value;mukhya.antarparivartan('lang1',true);">
+    </select>&nbsp;&nbsp;<button id="set_text1" class="set_text" onclick="set_inter_values('lang2');"></button>
+    &nbsp;&nbsp;<img class="cpy_btn" onclick="copy_text('second');" src="img/copy.png">
+    <br><textarea id="second" oninput="mukhya.antarparivartan('lang2');" class="normal" spellcheck="false"></textarea>
+</div>
+<script>
+    initialize("web");
+</script>
+
+</html>

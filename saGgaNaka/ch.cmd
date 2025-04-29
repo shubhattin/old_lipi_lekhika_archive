@@ -1,0 +1,1 @@
+d:/Softwares/Z/saGgaNakAnuprayogaH/py_env/Scripts/activate

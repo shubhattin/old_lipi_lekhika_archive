@@ -1,0 +1,19 @@
+main:
+  title:
+    - Lipi Lekhika
+    - Type Indian Languages with Full Speed and Accuracy
+  description: Tool to Type Indian Languages with full Speed and Accuracy
+  features:
+    name: Features
+    lekhan_sahayika:
+      title: Lekhan Sahayika
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: Phonetic Usage Tables
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: Support all the Brahmic scripts
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: Lipi parivartak
+      lekh_md: (features.parivartak)

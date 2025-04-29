@@ -1,0 +1,20 @@
+main:
+  title:
+    - ലിപി ലേഖിക
+    - പൂർണ്ണ വേഗതയോടും കൃത്യതയോടും കൂടി ഇന്ത്യൻ ഭാഷകൾ ടൈപ്പ് ചെയ്യുക
+  description: പൂർണ്ണ വേഗതയോടും കൃത്യതയോടും കൂടി ഇന്ത്യൻ ഭാഷകൾ ടൈപ്പ് ചെയ്യുന്നതിനുള്ള
+    ഉപകരണം
+  features:
+    name: സവിശേഷതകൾ
+    lekhan_sahayika:
+      title: ലേഖാൻ സഹായിക
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ഫോണറ്റിക് ഉപയോഗ പട്ടികകൾ
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: എല്ലാ ബ്രാഹ്മിക് സ്ക്രിപ്റ്റുകളും പിന്തുണയ്ക്കുക
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: ലിപി പരിവാർതക്
+      lekh_md: (features.parivartak)

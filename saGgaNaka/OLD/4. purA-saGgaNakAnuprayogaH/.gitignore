@@ -1,0 +1,8 @@
+build
+dist
+lekhika.spec
+*__pycache__
+samanya.spec
+compile.cmd
+sign.cmd
+kAraH/sign.cmd

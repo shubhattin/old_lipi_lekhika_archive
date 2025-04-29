@@ -1,0 +1,19 @@
+main:
+  title:
+    - लिपिलेखिका
+    - लिखतु भारतीयभाषाः पूर्णेन गत्या सूक्ष्मतया सह
+  description: उपकरणं लिखितुं भारतीयभाषाः पूर्णगतिसूक्ष्मताभिः सह
+  features:
+    name: वैशिष्ट्याः
+    lekhan_sahayika:
+      title: लेखनसहायिका
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ध्वन्यात्मिकाः प्रयोगसूच्यः
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: सर्वाः ब्राह्मिकलिप्यः उपलब्धाः
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: लिपिपरिवर्तकम्
+      lekh_md: (features.parivartak)

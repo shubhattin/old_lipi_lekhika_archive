@@ -1,0 +1,19 @@
+main:
+  title:
+    - लिपि लेखिका
+    - पूर्ण वेग आणि अचूकतेसह भारतीय भाषा टाइप करा
+  description: पूर्ण वेग आणि अचूकतेसह भारतीय भाषा टाइप करण्याचे साधन
+  features:
+    name: वैशिष्ट्ये
+    lekhan_sahayika:
+      title: लेखन सहायिका
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ध्वन्यात्मक उपयोग कोष्टक
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: सर्व ब्राह्मी लिपीचे समर्थन करा
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: Lipi parivartak
+      lekh_md: (features.parivartak)

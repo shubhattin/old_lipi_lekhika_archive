@@ -1,0 +1,6 @@
+    Installation Instructions :-
+1 - Don't Use Directly extract Files to a folder and then use.
+2 - Open the file "Install Lipi Lekhika". 
+3 - Ignore any Warnings shown or bypass the warnings.
+4 - You Can also open the Setup directly.
+           Done.

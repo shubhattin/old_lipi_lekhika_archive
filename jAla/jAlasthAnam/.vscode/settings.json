@@ -1,0 +1,5 @@
+{
+  "python.formatting.provider": "black",
+  "scss.lint.unknownAtRules": "ignore",
+  "workbench.localHistory.enabled": false
+}

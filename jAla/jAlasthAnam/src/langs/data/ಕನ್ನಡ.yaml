@@ -1,0 +1,19 @@
+main:
+  title:
+    - ಲಿಪಿ ಲೇಖಿಕಾ
+    - ಪೂರ್ಣ ವೇಗ ಮತ್ತು ನಿಖರತೆಯೊಂದಿಗೆ ಭಾರತೀಯ ಭಾಷೆಗಳನ್ನು ಬೆರಳಚ್ಚಿಸಿ
+  description: ಪೂರ್ಣ ವೇಗ ಮತ್ತು ನಿಖರತೆಯೊಂದಿಗೆ ಭಾರತೀಯ ಭಾಷೆಗಳನ್ನು ಬೆರಳಚ್ಚಿಸುವ ಸಾಧನ
+  features:
+    name: ಲಕ್ಷಣಗಳು
+    lekhan_sahayika:
+      title: ಲೇಖಾನ್ ಸಹಾಯ್ಕಾ
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ಫೋನೆಟಿಕ್ ಬಳಕೆ ಕೋಷ್ಟಕಗಳು
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: ಎಲ್ಲಾ ಬ್ರಾಹ್ಮಿಕ್ ಲಿಪಿಗಳನ್ನು ಬೆಂಬಲಿಸಿ
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: ಲಿಪಿ ಪರಿವಾರಕ್
+      lekh_md: (features.parivartak)

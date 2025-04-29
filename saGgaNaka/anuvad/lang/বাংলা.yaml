@@ -1,0 +1,134 @@
+about_title: Lipi Lekhika সম্পর্কে
+anuprayog: অ্যাপ
+app_title: লিপি লেকিকা
+download_msg: 'Lipi Lekhika এর নতুন সংস্করণ উপলব্ধ!
+
+  আপনি কি নতুন সংস্করণে আপডেট করতে চান?'
+exit_msg: লিপি লেকিকা বন্ধ
+hide2: 'লিপি লেকিকা ব্যাকগ্রাউন্ডে চলছে।
+
+  টাস্কবার আইকনের মাধ্যমে নিয়ন্ত্রণ করা যেতে পারে'
+lang: ভাষা
+licence_title: লিপি লেকিকা লাইসেন্স
+menu_values:
+  about: সম্বন্ধে
+  default: ডিফল্ট পছন্দসমূহ বিন্যাস করুন
+  encoding_table: এনকোডিং সারণি প্রদর্শন করুন
+  extra: অন্যান্য তথ্য
+  normal_version: সাধারণ সংস্করণ খুলুন (Lipi parivartak)
+  sahayika: লেখান সহায়িকা
+  startup: অ্যাপ স্টার্টআপে এই উইন্ডোটি খুলুন
+  typing_lang: টাইপিং ভাষা
+'no': না
+'off': বন্ধ
+'on': অন
+sahAyikA_msg:
+  first_sahayika: 'অক্ষরগুলি তাদের সংশ্লিষ্ট অক্ষরার জন্য কালো অক্ষরে টিপুন বা ক্লিক
+    করুন।
+
+    প্রেস; অথবা q রিসেট করতে বা ধারাবাহিকতা অপসারণ করতে।'
+  second_sahayika: 'Shift এছাড়াও CapsLock.For eg: Shift+a➠A এর জায়গায় ব্যবহার করা
+    যেতে পারে।'
+sahayika_off: Lekhan Sahayika বন্ধ করা হয়েছে
+sahayika_on: Lekhan Sahayika চালু
+scripts:
+  Assamese: অসমীয়া
+  Bengali: বাঙ্গালি
+  Brahmi: ব্রাহ্মী
+  Granth: Granth
+  Gujarati: গুজরাতি
+  Hindi: হিন্দি
+  Kannada: কন্নড়
+  Kashmiri: কাশ্মীরি
+  Sindhi: সিন্ধি
+  Konkani: কোঙ্কানি
+  Malayalam: মালয়ালম
+  Marathi: মারাঠি
+  Modi: মোদী
+  Nepali: নেপালি
+  Odia: ওড়িয়া
+  Punjabi: পাঞ্জাবী
+  Romanized: রোমানাইজড
+  Sanskrit: সংস্কৃত
+  Sharada: শারদা
+  Siddham: সিদ্ধাম
+  Sinhala: সিংহলী
+  Tamil: তামিল
+  Tamil-Extended: তামিল প্রসারিত
+  Purna-Devanagari: পূর্ণ দেবনাগরী
+  Telugu: তেলেগু
+  Urdu: ঊর্দু
+startup_msg: 'Lipi Lekhika শুরু
+
+  অ্যাপ: {0}
+
+  লেখান সহায়িকা: {1}
+
+  টাইপিং স্ক্রিপ্ট: {2}
+
+  {3}
+
+  সরাসরি অ্যাপ শুরু করতে Shift+F2 টিপুন'
+time_exceed: 'Lipi Lekhika বন্ধ করা হয়েছে
+
+  যেহেতু এটি 10 মিনিটের জন্য অলস রাখা হয়েছিল।'
+title:
+  add_lang: আরও সম্পর্কিত স্ক্রিপ্ট যোগ করুন
+  app_lang_img: ইউজার ইন্টারফেস ভাষা সেট করুন
+  app_lang_option: ইউজার ইন্টারফেস ভাষা সেট করুন
+  background: টাস্কবার এবং কীবোর্ড শর্টকাটগুলির মাধ্যমে পটভূমিতে ব্যবহার করুন
+  github: 'Lipi Lekhika হল ওপেন সোর্স সফ্টওয়্যার যার সোর্স কোড GitHub এ পড়া যেতে
+    পারে।
+
+    এই পৃষ্ঠায় যেতে এখানে ক্লিক করুন।'
+  main0: Lipi Lekhika চালু করুন
+  main1: Lipi Lekhika বন্ধ করুন
+  menu: ডিফল্ট বিকল্প এবং আরও সেট করুন
+  sahayika0: Lekhan Sahayika চালু করুন
+  sahayika1: Lekhan Sahayika বন্ধ করুন
+  typ_lang: টাইপিং ভাষা সেট করুন
+  usage: ব্যবহারের সারণি এবং অন্যান্য নির্দেশাবলী দেখুন
+tray:
+  exit: অ্যাপ্লিকেশন থেকে প্রস্থান করুন
+  restart: Resatrt Lipi Lekhika
+  restarted: Lipi Lekhika Resatrted
+  show: অ্যাপ উইন্ডো দেখান
+  title: 'লিপি লেকিকা {0}
+
+    টাইপ করার ভাষা: {1}
+
+    লেখান সহায়িকা: {2}'
+turned_off: বন্ধ করা হয়েছে
+turned_on: চালু করা হয়েছে
+values:
+  app_description: 'এটি সম্পূর্ণ গতি এবং নির্ভুলতার সাথে ভারতীয় ল্যাঙ্গুগেস টাইপ
+    করার জন্য একটি অ্যাপ্লিকেশন।
+
+    সম্পর্কিত আরও তথ্যের জন্য lipilekhika.pages.dev দেখুন।'
+  background_run: পটভূমিতে চালান
+  instructions: "• উইন্ডোজ + Ctrl:-চালু/ বন্ধ করতে\n• . (ডট) :- সংখ্যা, স্বরবর্ণ বা\
+    \ বিশেষ প্রতীক টাইপ করতে \n• 1 সেকেন্ডের জন্য Alt:- বর্তমান নির্বাচিত বিকল্পগুলি\
+    \ দেখতে।\n• লেখান সহায়িকা কার্সার (মাউসের) অবস্থানে থাকবে।"
+  licence: লাইসেন্স দেখান
+  nirdesh: '• Shift+F2 :-Lipi Lekhika সরাসরি শুরু করতে এবং • উইন্ডোজ + Esc :- Appliaction
+    বন্ধ করতে
+
+    • লেখান সহায়িকা বর্তমান মাউস কার্সার পজিশনে অসন্তুষ্ট হবেন।
+
+    • আপনি মেনুতে অ্যাপ্লিকেশনের জন্য ডিফল্ট বিকল্প সেট করতে পারেন, যেমন- ডিফল্ট টাইপিং
+    ভাষার জন্য।
+
+    উইন্ডোজ + এফ 5: ভলিউম এবং উইন্ডোজ + এফ 6 হ্রাস করার জন্য: ভলিউম বাড়ানোর জন্য'
+  pin_top: উপরে পিন করুন
+  sUchI_msg: 'নীচের অক্ষরগুলি টাইপ করার জন্য আরও বিকল্প রয়েছে।
+
+    আরও জানার জন্য লেখান সহায়িকা চালু করার বিষয়টি নিশ্চিত করুন।'
+  sahayika: লেখান সহায়িকা
+  typing_lang_main: ভাষা
+  version: 'সংস্করণ: {0}'
+  vishisht_button: প্রধান অ্যাপ্লিকেশন ব্যবহার করুন
+  vishisht_label: 'এটি Lipi Lekhika এর Advanced Version।
+
+    এতে সম্পাদিত তথ্য থাকতে পারে।'
+  issue: একটি সমস্যা রিপোর্ট করুন
+'yes': হ্যাঁ

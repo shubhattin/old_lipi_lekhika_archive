@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /src/
+Disallow: /img/
+Disallow: /i/
+Disallow: /oth/
+Disallow: /en/
+Disallow: /en
+Disallow: /404.html
+Disallow: /app.css
+Disallow: /app.txt
+Disallow: /app.js
+
+Sitemap: https://app-lipilekhika.pages.dev/sitemap.xml

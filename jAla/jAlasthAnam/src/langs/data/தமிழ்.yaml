@@ -1,0 +1,20 @@
+main:
+  title:
+    - லிபி லெகிகா
+    - முழு வேகம் மற்றும் துல்லியத்துடன் இந்திய மொழிகளை தட்டச்சு செய்க
+  description: முழு வேகம் மற்றும் துல்லியத்துடன் இந்திய மொழிகளைத் தட்டச்சு செய்வதற்கான
+    கருவி
+  features:
+    name: முகத்தோற்றக் கூறுகள்
+    lekhan_sahayika:
+      title: லேகான் சஹாயிகா
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ஒலியியல் பயன்பாட்டு அட்டவணைகள்
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: அனைத்து பிராமிக் ஸ்கிரிப்ட்களையும் ஆதரிக்கவும்
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: லிபி பரிவர்த்தக்
+      lekh_md: (features.parivartak)

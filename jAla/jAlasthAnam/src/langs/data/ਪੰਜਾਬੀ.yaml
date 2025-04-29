@@ -1,0 +1,19 @@
+main:
+  title:
+    - ਲਿਪਿ ਲੇਖਿਕਾ
+    - ਪੂਰੀ ਗਤੀ ਅਤੇ ਸਟੀਕਤਾ ਨਾਲ ਭਾਰਤੀ ਭਾਸ਼ਾਵਾਂ ਟਾਈਪ ਕਰੋ
+  description: ਪੂਰੀ ਗਤੀ ਅਤੇ ਸਟੀਕਤਾ ਨਾਲ ਭਾਰਤੀ ਭਾਸ਼ਾਵਾਂ ਟਾਈਪ ਕਰਨ ਲਈ ਟੂਲ
+  features:
+    name: ਫੀਚਰ
+    lekhan_sahayika:
+      title: ਲੇਖਨ ਸਹਾਯਿਕਾ
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ਫੋਨੇਟਿਕ ਵਰਤੋਂ ਟੇਬਲ
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: ਸਾਰੀਆਂ ਬ੍ਰਹਮਿਕ ਸਕ੍ਰਿਪਟਾਂ ਦਾ ਸਮਰਥਨ ਕਰੋ
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: ਲਿਪੀ ਪਰਿਵਰਤਨਕ
+      lekh_md: (features.parivartak)

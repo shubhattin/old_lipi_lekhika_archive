@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>देवनागरी लेखिका</title>
+    <script>
+        let code_text = "",
+            dev_text = "",
+            dynamic_text = "",
+            dev_num = false;
+
+        function change(target) {
+            document.getElementById("bdy").innerHTML = html_data[target];
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfb8b;
+            font-family: "Nirmala UI";
+        }
+
+        .btn {
+            font-size: 27px;
+            font-weight: bold;
+            padding: 5px 6px;
+            color: #ff0606;
+            background-color: #c5f714;
+        }
+
+        .btnm {
+            font-size: 22px;
+            font-weight: bold;
+            border: 2px solid rgb(32, 11, 11);
+            color: #d31717;
+            background-color: #1cf1f1;
+        }
+
+        textarea#dev {
+            background-color: #fceeee;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: 3px solid rgb(32, 11, 11);
+            word-wrap: break-word;
+            width: 92vw;
+            height: 38vh;
+            resize: none;
+            font-family: "Nirmala UI";
+        }
+    textarea#code {
+            background-color: #fceeee;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 3px solid rgb(32, 11, 11);
+            word-wrap: break-word;
+            width: 92vw;
+            height: 38vh;
+            resize: none;
+            font-family: "Nirmala UI";
+        }
+
+        textarea#dynamic {
+            background-color: #e3faf7;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: 3px solid black;
+            word-wrap: break-word;
+            width: 92vw;
+            height: 55vh;
+            resize: none;
+            font-family: "Nirmala UI";
+        }
+
+        label#l1,
+        label#l2,
+        label#l3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: blueviolet;
+        }
+
+        p#about_text {
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        p.up {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #3b07f7;
+        }
+
+        label#lk {
+            font-size: 27px;
+            font-weight: bolder;
+            color: rgb(255, 74, 2);
+        }
+
+        button#kl {
+            font-weight: bolder;
+            font-size: 25px;
+            padding: 2px 2px;
+            color: brown;
+            background-color: rgb(23, 238, 209);
+        }
+
+        div#0,
+        div#1,
+        div#2,
+        div#3,
+        div#4,
+        div#5 {
+            visibility: hidden;
+        }
+
+        .km {
+            color: #fbff00;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #2b088d;
+        }
+    </style>
+</head>
+
+<body id="bdy"></body>
+<div id="0">
+    <div>
+        <button class="btn">मुख्य</button>
+        <button class="btn" onclick="change(1)">प्रयोग विधि</button>
+        <button class="btn" onclick="change(2)">ऐप परिचय</button>
+    </div><br>
+    <label for="numbox" style="font-size: 23px;font-weight: bold;color: rgb(255, 5, 5);">
+        देवनागरी संखयाएं / नंबर</label>
+    <input type="checkbox" id="numbox" onclick="change_num()"><br><br>
+    <div id="mode"></div>
+</div>
+<div id="1">
+    <style>
+        hj {
+            font-weight: bold;
+            color: rgb(26, 116, 6);
+            font-size: larger;
+        }
+    </style>
+    <div>
+        <button class="btn" onclick="change(0);change_mode_text(1);">मुख्य</button>
+        <button class="btn">प्रयोग विधि</button>
+        <button class="btn" onclick="change(2)">ऐप परिचय</button>
+    </div><br>
+    <label for="kl" id="lk">परिवर्तन सूची अवश्य<br> देखें तब नीचे पढ़ें</label>
+    <button id="kl" onclick="change(3)">यहाँ दबाएं</button>
+    <div>
+        <h2>
+            उपर्युक्त सूची के मुख्य अंश :- <br>
+            1 - व्यंजनों को लिखना
+        </h2>
+        <p class="up">
+            व्यंजन के कोड को स्वतंत्र रूप मे लिखने से उसमे हलंत लग जता है ।
+            इसे हटाने के लिये उसके आगे 'मत्रा' लगाना आवश्यक है । <br><br>
+            Input: k kh kSh tr jY shr Dx jz <br>
+            Output: क् ख् क्ष् त्र् ज्ञ् श्र् ड़् ज़् <br>
+        </p>
+        <h2>
+            2 - स्वर / मात्रा एवं पूर्ण विराम
+        </h2>
+        <p class="up">
+            स्वर के कोड को लिखने पर यदि उसके पहले कोइ व्यंजन होगा तो वह उससे मिल जाएगा अंयथा स्वतंत्र रहेग ।<br>
+            पूर्ण विराम(।) . से लिखा जाएगा और पद विराम(॥) .. से । <br><br>
+            Input: A kA jza ka AUM RR R kR Aw DAW . .. <br>
+            Output: आ का ज़ क ॐ ॠ ऋ कृ ऽ डॉ । ॥<br>
+        </p>
+        <h2>
+            3 - विविध
+        </h2>
+        <p class="up">
+            दो या उससे अधिक लेटर्स वाले कोड के लेटर्स को अलग-अलग विवेचित करने के लिए ~ चिह्न का प्रयोग करें ।
+            यदि आप चाहते हैं कि किसी ऐल्फाबेट के साथ परिवर्तन कि प्रक्रिया न हो तो उसके पहले '$' चिह्न लगायें
+            ।<br>
+            <br>
+            Input: chh ch~h kh k~h $h $. ~~ $$<br>
+            Output: छ् च्ह् ख् क्ह् h . ~ $<br><br>
+            'ड़' या 'ढ़' लिखने के लिये ड या ढ के आगे x लगा दें ।
+            किसी व्यंजन मे नुक्ता लगाने के लिये उसके आगे z जोड़ दें । <br><br>
+            Input: Dx Dhx jz kz Lz <br>
+            Output: ड़् ढ़् ज़् क़् ऴ् <br>
+        </p>
+        <h2>उदाहरण</h2>
+        <p style="font-weight: bold;color: rgb(146, 22, 119);font-size: 21px;">
+            <hj>सांकेतिक कोड<br></hj>
+            1 - AUM shrI paramAtmane namaH<br>
+            2 - DAWkTara ke pAsa jAo .<br>
+            3 - khilADxI ne achchhA pradarshana kiyA <br>
+            4 - jzarA idhara to Aie .<br>
+            5 - aMya udAharaNa - Aw, dinAGka, Dhxa, jza, khza, R, RR, kR, kRR, pra, rpa, Ycha
+            <br>
+        </p>
+        <p style="font-weight: bold;color: rgba(216, 7, 7, 0.945);font-size: 21px;">
+            <hj>देवनागरी लेख<br></hj>
+            1 - ॐ श्री परमात्मने नमः <br>
+            2 - डॉक्टर के पास जाओ ।<br>
+            3 - खिलाड़ी ने अच्छा प्रदर्शन किया । <br>
+            4 - ज़रा इधर तो आइए ।<br>
+            5 - अंय उदाहरण - ऽ, दिनाङ्क, ढ़, ज़, ख़, ऋ, ॠ, कृ, कॄ, प्र, र्प, ञ्च<br>
+        </p>
+    </div>
+</div>
+<div id="2">
+    <div>
+        <button class="btn" onclick="change(0);change_mode_text(1);">मुख्य</button>
+        <button class="btn" onclick="change(1)">प्रयोग विधि</button>
+        <button class="btn">ऐप परिचय</button>
+    </div><br>
+    <h2 style="color: red;font-weight: bold;">
+        Author : शुभम आनंद गुप्ता<br>
+        E-mail : devanagaritool@gmail.com <br>
+        Website : <a href="https://bit.ly/DEVweb" style="color: #1e8d08;">bit.ly/DEVweb</a>
+    </h2>
+    <p id="about_text">
+        यह ऐप्लिकेशन आपके हिन्दी, संस्कृत एवं मराठी के लेखन कार्य को सरल करने के लिए बनाया गया है ।
+        प्रस्तुत समय मे हिन्दी और मराठी के लिए अच्छे टायपिंग उपकरण तो हैं , परंतु संस्कृत के लिए सटीक उपकरण
+        न मिलने पर मैंने स्वयं ही एक अत्यधिक सटीक उपकरण बनाने का निश्चय किया ।
+        <br> &nbsp;&nbsp;
+        इस विषय मे शोध करने के पश्चात मैंने यह "देवनागरी लेखिका" नामक ऐप बनाया ।
+        यह उपकरण मुख्यतः संस्कृत लेखन कार्य हेतु है, परंतु इसका यह अर्थ नहीं की हिन्दी और मराठी को इससे
+        नहीं लिखा जा सकता । बल्कि यह किसी भी देवनागरी लिपि मे लिखी जाने वाली भाषा को अत्यंत सटीक और सहजता पूर्वक लिख सकता है ।
+    </p>
+
+</div>
+<div id="3">
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            text-align: left;
+            color: orangered;
+        }
+
+        button {
+            background-color: yellow;
+            font-weight: bold;
+            font-size: 25px;
+            padding: 5px 5px;
+            color: orangered;
+        }
+    </style>
+    <h1>
+        परिवर्तन सूची
+    </h1>
+    <button class="btn"
+        onclick="if(dynamic_redirect_status){dynamic_redirect_status=false;change(0);change_mode_text(1);}else change(1);">
+        वापस जाएं</button><br>
+    <br><br><img src="table.png"/>
+</div>
+<div id="4">
+    <button class="btnm" onclick="change_mode_text(2);">सामान्य प्रणाली मे बदलें</button><br><br>
+    <label for="dynamic" id="l3">यहाँ लिखें</label><br>
+    <textarea id="dynamic" oninput="display(3)"></textarea>
+    <button class="km" onclick="change(1);">यहाँ दबाकर प्रयोग विधि अवश्य पढ़ें</button>&nbsp;&nbsp;
+    <button class="km" onclick="change(3);dynamic_redirect_status=true">परिवर्तन सूची देखें</button>
+    <div style="font-size: 15px;font-weight: bold;">
+        नोट :- '$' और '~' चिह्न का प्रयोग यहाँ न करें, लिखित डेटा को बीच से संपादित न करें।<br>
+        यह दोनों काम सामान्य प्रणाली मे जाकर करें । 
+    </div>
+</div>
+<div id="5">
+    <button class="btnm" onclick="change_mode_text(1);">स्व परिवर्तित प्रणाली मे बदलें</button><br><br>
+    <label for="code" id="l1">सांकेतिक यहाँ</label><br>
+    <textarea id="code" oninput="display(1)" class="normal"></textarea><br>
+    <br><label for="dev" id="l2">देवनागरी यहाँ</label><br>
+    <textarea id="dev" oninput="display(2)" class="normal"></textarea>
+</div>
+<script>
+    let html_data = [
+        document.getElementById("0").innerHTML,
+        document.getElementById("1").innerHTML,
+        document.getElementById("2").innerHTML,
+        document.getElementById("3").innerHTML,
+        document.getElementById("4").innerHTML,
+        document.getElementById("5").innerHTML
+    ];
+    document.getElementById("bdy").innerHTML = html_data[0];
+
+    let dynamic_mode_status = true,
+        dynamic_status = false;
+    dynamic_redirect_status = false;
+
+    const swar = {
+        "ॐ": "AUM",
+        "ऽ": "Aw",
+        "ॠ": "RR",
+        "ऋ": "R",
+        "ॡ": "XR",
+        "ऌ": "X",
+        "अ": "a",
+        "आ": "A",
+        "इ": "i",
+        "ई": "I",
+        "उ": "u",
+        "ऊ": "U",
+        "ए": "e",
+        "ऐ": "E",
+        "ओ": "o",
+        "औ": "O",
+        '॒': 'q',
+    };
+    const matraa = {
+        "ा": "A",
+        "ि": "i",
+        "ी": "I",
+        "ु": "u",
+        "ू": "U",
+        "े": "e",
+        "ै": "E",
+        "ो": "o",
+        "ौ": "O",
+        "ॄ": "RR",
+        "ृ": "R",
+        "ॣ": "XR",
+        "ॢ": "X",
+    };
+    const vsh_matra = {
+        "ँ": "MM",
+        "ं": "M",
+        "ॅ": "W",
+        "ः": "H"
+    };
+    const vyanjan = {
+        "॥": "..",
+        "।": ".",
+        "छ": "chh",
+        "ख": "kh",
+        "घ": "gh",
+        "च": "ch",
+        "झ": "jh",
+        "ठ": "Th",
+        "ढ": "Dh",
+        "थ": "th",
+        "फ": "ph",
+        "भ": "bh",
+        "श": "sh",
+        "ष": "Sh",
+        "ध": "dh",
+        "ग": "g",
+        "ङ": "G",
+        "ज": "j",
+        "ञ": "Y",
+        "ट": "T",
+        "ड": "D",
+        "ण": "N",
+        "त": "t",
+        "द": "d",
+        "न": "n",
+        "प": "p",
+        "ब": "b",
+        "म": "m",
+        "य": "y",
+        "र": "r",
+        "ल": "l",
+        "व": "v",
+        "क": "k",
+        "स": "s",
+        "ह": "h",
+        "ळ": "L"
+    };
+    const nukta_misc = {
+        "ड": "ड़",
+        "ढ": "ढ़",
+        "र": "ऱ",
+        "ळ": "ऴ",
+        "क": "क़",
+        "ख": "ख़",
+        "ग": "ग़",
+        "ज": "ज़",
+        "फ": "फ़",
+        "य": "य़"
+    };
+    const number = {
+        "0": "०",
+        "1": "१",
+        "2": "२",
+        "3": "३",
+        "4": "४",
+        "5": "५",
+        "6": "६",
+        "7": "७",
+        "8": "८",
+        "9": "९"
+    };
+
+    function swap(js) {
+        let ret = {};
+        for (let key in js)
+            ret[js[key]] = key;
+        return ret;
+    }
+
+    function IN(a, b) {
+        for (let x = 0; x < b.length; x++)
+            if (b[x] === a)
+                return true;
+        return false;
+    }
+
+    function merge(o1, o2) {
+        f = {};
+        for (var i in o1) {
+            f[i] = o1[i];
+        }
+        for (var j in o2) {
+            f[j] = o2[j];
+        }
+        return f;
+    }
+
+    const varg_vishesh = "गजटडतदपबकस".split("");
+    const V1 = merge(vyanjan, {
+        "ड़": "Dx",
+        "ढ़": "Dhx",
+        "ऱ": "rz",
+        "ऴ": "Lz",
+        "क़": "kz",
+        "ख़": "khz",
+        "ग़": "gz",
+        "ज़": "jz",
+        "फ़": "phz",
+        "य़": "yz"
+    });
+    const S1 = merge(swar, {
+        "ऑ": "AW",
+        "ऍ": "eW"
+    });
+
+    const Nmb = swap(number),
+        Swar = swap(swar),
+        Vsh_m = swap(vsh_matra),
+        Matraa = swap(matraa),
+        Vyanjan = swap(vyanjan),
+        S = Object.keys(Swar),
+        V = Object.keys(Vyanjan),
+        M = Object.keys(Matraa);
+
+    function dev_to_code(dev) {
+        let result = [],
+            a_status;
+        dev = dev.split("");
+        for (let x = 0; x < dev.length; x++) {
+            a_status = false;
+            if (dev[x] in V1) {
+                if (IN(dev[x], varg_vishesh) && (dev[x + 1] + dev[x + 2]) === "्ह") {
+                    result.push(V1[dev[x]]);
+                    result.push("~");
+                    x++;
+                    continue;
+                }
+                if (V1[dev[x]] === "." || V1[dev[x]] === "..") {
+                    result.push(V1[dev[x]]);
+                    continue;
+                }
+                result.push(V1[dev[x]]);
+                if (dev[x + 1] === "ॉ") {
+                    result.push("AW");
+                    x++;
+                    continue;
+                }
+                if (dev[x + 1] === "्")
+                    x++;
+                else if (dev[x + 1] in matraa) {
+                    x++;
+                    result.push(matraa[dev[x]]);
+                } else
+                    a_status = true;
+            } else if (dev[x] in S1)
+                result.push(S1[dev[x]]);
+            else if (dev[x] in Nmb && dev_num)
+                result.push(Nmb[dev[x]]);
+            else {
+                if (IN(dev[x], "eErtTyuUiIoOpaAsSdDgGYhHRXjkLlvnbNmM.".split("")) && !dynamic_status)
+                    result.push("$");
+                result.push(dev[x]);
+            }
+            if (a_status)
+                result.push("a");
+            if (dev[x + 1] in vsh_matra) {
+                x++;
+                result.push(vsh_matra[dev[x]]);
+            }
+        }
+        return result.join("");
+    }
+
+    function code_to_dev(code) {
+        function give(n) {
+            let s = "";
+            for (let h = 0; h < n && h + x < code.length; h++)
+                s += code[h + x];
+            return s;
+        }
+
+        function In(khoja) {
+            for (let d = 0; d < khoja.length; d++) {
+                if (give(khoja[d].length) === khoja[d]) {
+                    t = khoja[d];
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        let t = "";
+        let result = [];
+        let matraa_status;
+        code = code.split("");
+        for (var x = 0; x < code.length;) {
+            if (code[x] === "$") {
+                if (dynamic_status) {
+                    result.push("$");
+                    x++;
+                    if (x != code.length - 1) {
+                        result.push(code[x]);
+                        x++;
+                    }
+                    continue;
+                }
+                if (code[x + 1] === "$")
+                    result.push("$");
+                else
+                    result.push(code[x + 1]);
+                x += 2;
+                continue;
+            } else if (code[x] in number && dev_num) {
+                result.push(number[code[x]]);
+                x++;
+            } else if (In(S)) {
+                let misc = {
+                    "आ": "ऑ",
+                    "ए": "ऍ"
+                };
+                result.push(Swar[t]);
+                x += t.length;
+                while (In(Object.keys(Vsh_m))) {
+
+                    if (result[result.length - 1] in misc) {
+                        result[result.length - 1] = misc[result[result.length - 1]];
+                        x++;
+                    } else {
+                        x += t.length;
+                        result.push(Vsh_m[t]);
+                    }
+                }
+            } else if (In(V) || code[x] === "~") {
+                if (code[x] === "~") {
+                    if (code[x + 1] === "~") {
+                        result.push("~");
+                        x += 2;
+                    } else
+                        x++;
+                    continue;
+                }
+                let matraa_status = false;
+                result.push(Vyanjan[t]);
+                x += t.length;
+                if (Vyanjan[t] === "।" || Vyanjan[t] === "॥")
+                    continue;
+                if ((code[x] === "z" || code[x] === "x")) {
+                    if (result[result.length - 1] in nukta_misc)
+                        result[result.length - 1] = nukta_misc[result[result.length - 1]];
+                    x++;
+                }
+                if (In(M) || code[x] === "a") {
+                    if (code[x] === "a")
+                        x++;
+                    else {
+                        x += t.length;
+                        result.push(Matraa[t]);
+                    }
+                    while (In(Object.keys(Vsh_m))) {
+                        x += t.length;
+                        result.push(Vsh_m[t]);
+                    }
+                    matraa_status = true;
+                }
+                if (!matraa_status)
+                    result.push("्");
+            } else {
+                result.push(code[x]);
+                x++;
+            }
+        }
+        return result.join("");
+    }
+
+    function convert_dynamic_num(jk) {
+        let result = [];
+        for (let y = 0; y < jk.length; y++) {
+            if (IN(jk[y], "1234567890१२३४५६७८९०".split(""))) {
+                if (dev_num)
+                    result.push(number[jk[y]]);
+                else
+                    result.push(Nmb[jk[y]])
+            } else
+                result.push(jk[y]);
+        }
+        return result.join("");
+    }
+
+    function change_num() {
+        dev_num = !dev_num;
+        if (dynamic_mode_status) {
+            document.getElementById("dynamic").value = convert_dynamic_num(document.getElementById("dynamic").value);
+            dynamic_text = document.getElementById("dynamic").value;
+        } else {
+            document.getElementById("dev").value = code_to_dev(document.getElementById("code").value);
+            document.getElementById("code").value = dev_to_code(document.getElementById("dev").value);
+            dev_text = document.getElementById("dev").value;
+            code_text = document.getElementById("code").value;
+        }
+    }
+
+    function display(n) {
+        if (n === 0) {
+            document.getElementById("numbox").checked = dev_num;
+
+        } else if (n === 3) {
+            dynamic_text = document.getElementById("dynamic").value;
+            dynamic_status = true;
+            dynamic_text = dev_to_code(dynamic_text, true);
+            dynamic_text = code_to_dev(dynamic_text, true);
+            dynamic_status = false;
+            document.getElementById("dynamic").value = dynamic_text;
+            dev_text = add_dollar(dynamic_text);
+        } else if (n === 2) {
+            dev_text = document.getElementById("dev").value;
+            code_text = dev_to_code(dev_text);
+            document.getElementById("code").value = code_text;
+        } else if (n === 1) {
+            code_text = document.getElementById("code").value;
+            dev_text = code_to_dev(code_text);
+            document.getElementById("dev").value = dev_text;
+        }
+    }
+
+    function add_dollar(j) {
+            let result = [];
+            for (let x = 0; x < j.length; x++) {
+                if (j[x] === "$")
+                {
+                    x++;
+                    result.push(j[x]);
+                    continue;
+                }
+                else if (IN(j[x], "eErtTyuUiIqoOpaAsSdDgGYhHRXjkLlvnbNmM.".split("")))
+                    result.push("$");
+                result.push(j[x]);
+            }
+            return result.join("");
+    }
+
+    function change_mode_text(m) {
+        
+        if (m === 1) {
+            document.getElementById("mode").innerHTML = html_data[4];
+            dynamic_text = add_dollar(dev_text);
+            document.getElementById("dynamic").value = dynamic_text;
+            dynamic_mode_status = true;
+        } else if (m === 2) {
+            dynamic_mode_status = false;
+            dev_num = !dev_num;
+            document.getElementById("mode").innerHTML = html_data[5];
+            document.getElementById("dev").value = dev_text;
+            code_text = dev_to_code(dev_text);
+            document.getElementById("code").value = code_text;
+            change_num();
+        }
+        document.getElementById("numbox").checked = dev_num;
+    }
+    display(0);
+    change_mode_text(1);
+</script>
+
+</html>

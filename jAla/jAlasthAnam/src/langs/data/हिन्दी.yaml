@@ -1,0 +1,19 @@
+main:
+  title:
+    - लिपि लेखिका
+    - लिखें भरतीय भाषाएं पूर्ण गति व सूक्ष्मता के साथ
+  description: एक उपकरण भारतीय भाषाओं को पूर्ण गति एवं सूक्ष्मता से लिखने के लिए
+  features:
+    name: विशेषताएं
+    lekhan_sahayika:
+      title: लेखन सहायिका
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ध्वन्यात्मक प्रौयोग सूचियां
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: सभी ब्राह्मिक लिपियां उपलब्ध
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: लिपि परिवर्तक
+      lekh_md: (features.parivartak)

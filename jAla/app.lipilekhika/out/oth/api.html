@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="robots" content="noindex">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>Lipi Lekhika API Tester</title>
+    <script src=https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js></script>
+</head>
+
+<body>
+    <select id="one"></select>
+    <textarea id=t cols=30 rows=10 class=block placeholder="Type Text Here"></textarea>
+    <select id="two"></select>
+    <button id=btn1>Down</button>
+    <button id=btn2>Up</button>
+    <label>
+        <input type="checkbox" id="auto_mode">
+        <span>Auto Convert</span>
+    </label>
+    <br>
+    <textarea id=o cols=30 rows=10 class=block placeholder="Type Text Here"></textarea>
+    <style>
+        textarea {
+            border: 1px solid #000;
+            overflow: scroll
+        }
+
+        #btn1,
+        #btn2 {
+            font-weight: bolder;
+        }
+
+        .block {
+            display: block;
+        }
+    </style>
+    <script>
+        let auto= false;
+        $("#auto_mode").prop("checked", auto);
+        $("#auto_mode").on("change", () => {
+            auto = !auto;
+        });
+        $("#o, #t").attr({
+            spellcheck: "false",
+            autocapitalize: "none",
+            autocomplete: "off",
+            autocorrect: "off"
+        });
+        if (true) {
+            let ln = {
+                Normal: "Normal (A)",
+                Devanagari: "Devanagari (अ)",
+                Hindi: "Hindi (अ)",
+                "Purna-Devanagari": "Purna Devanagari (अ)",
+                Bengali: "Bengali (অ)",
+                Telugu: "Telugu (అ)",
+                Tamil: "Tamil (அ)",
+                Marathi: "Marathi (अ)",
+                Gujarati: "Gujarati (અ)",
+                Malayalam: "Malayalam (അ)",
+                Kannada: "Kannada (ಅ)",
+                Oriya: "Oriya (ଅ)",
+                Assamese: "Assamese (অ)",
+                Konkani: "Konkani (अ)",
+                Sanskrit: "Sanskrit (अ)",
+                Punjabi: "Punjabi (ਅ)",
+                Nepali: "Nepali (अ)",
+                Urdu: "Urdu (ب)",
+                Romanized: "Romanized (ā)",
+                Sinhala: "Sinhala (අ)",
+                "Tamil-Extended": "Tamil Extended (அ)",
+                Sharada: "Sharada (𑆃)",
+                Modi: "Modi (𑘀)",
+                Siddham: "Siddham (𑖀)",
+                Granth: "Granth (𑌅)",
+                Brahmi: "Brahmi (𑀅)"
+            }
+            let t = "";
+            for (let x in ln)
+                t += `<option value=${x}>${ln[x]}</option>`;
+            $("#one, #two").html(t);
+        }
+        $("#one").val("Normal");
+        $("#two").val("Hindi");
+        var url = "https://lipi-1-e1902026.deta.app";
+        var convert = (t) => {
+            let v = [["#one", "#two", "#t", "#o"], ["#two", "#one", "#o", "#t"]][t];
+            $.post({
+                url: url,
+                data: JSON.stringify({
+                    from: $(v[0]).val(),
+                    to: $(v[1]).val(),
+                    text: $(v[2]).val()
+                }),
+                contentType: 'application/json;charset=UTF-8',
+                success: (d) => $(v[3]).val(d)
+            })
+        }
+        $("#btn1").click(() => convert(0));
+        $("#btn2").click(() => convert(1));
+        // Setting Default message
+        $("#t").val("paramAtmanE namaH");
+        $("#btn1").trigger("click");
+        $("#one").on("change", () => $("#btn2").trigger("click"));
+        $("#two").on("change", () => $("#btn1").trigger("click"));
+        $("#t").on("input", () => auto && $("#btn1").trigger("click"));
+        $("#o").on("input", () => auto && $("#btn2").trigger("click"));
+    </script>
+</body>
+
+</html>

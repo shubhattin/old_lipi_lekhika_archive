@@ -1,0 +1,19 @@
+main:
+  title:
+    - ଲିପି ଲେଖିକା
+    - ପୂର୍ଣ୍ଣ ବେଗ ଏବଂ ସଠିକତା ସହ ଭାରତୀୟ ଭାଷା ଟାଇପ୍ କରନ୍ତୁ
+  description: ପୂର୍ଣ୍ଣ ବେଗ ଏବଂ ସଠିକତା ସହିତ ଭାରତୀୟ ଭାଷାଟାଇପ୍ କରିବାକୁ ଉପକରଣ
+  features:
+    name: ବୈଶିଷ୍ଟ୍ୟଗୁଡିକ
+    lekhan_sahayika:
+      title: ଲେଖାନ୍ ସହାୟିକା
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ଫୋନେଟିକ୍ ବ୍ୟବହାର ଟେବୁଲ୍
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: ସମସ୍ତ ବ୍ରାମିକ୍ ସ୍କ୍ରିପ୍ଟକୁ ସମର୍ଥନ କରନ୍ତୁ
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: ଲିପି ପରିବର୍ତ୍ତକ
+      lekh_md: (features.parivartak)

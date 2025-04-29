@@ -1,0 +1,11 @@
+{
+    "replaces": {
+        "lang_code": "en",
+        "description": "Use Lipi Lekhika To Type Indian Languages with full Speed Accuracy. It Supports all the Indian Languages.",
+        "options": "{app_lang:\"English\"}",
+        "extras0": "",
+        "extras1": "",
+        "description_lang": "Use Lipi Lekhika To Type {0} with full Speed Accuracy. It Supports all the Indian Languages.",
+        "description_convert": "Use Lipi Parivartak to Convert {0}. Lipi Parivartak(Lipi Lekhika) Supports all Indian Scripts."
+    }
+}

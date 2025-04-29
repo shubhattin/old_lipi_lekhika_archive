@@ -1,0 +1,19 @@
+main:
+  title:
+    - લિપી લેખિકા
+    - સંપૂર્ણ ઝડપ અને ચોકસાઈ સાથે લખો ભારતીય ભાષાઓ
+  description: સંપૂર્ણ ઝડપ અને ચોકસાઈ સાથે ભારતીય ભાષાઓ ટાઇપ કરવા માટેનું સાધન
+  features:
+    name: લક્ષણો
+    lekhan_sahayika:
+      title: લેખાન સહાયિકા
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: ફોનેટિક વપરાશ કોષ્ટકો
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: બધી બ્રહ્મિક લિપિને આધાર આપો
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: લિપીવર્તક
+      lekh_md: (features.parivartak)

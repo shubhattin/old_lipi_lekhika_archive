@@ -1,0 +1,54 @@
+---
+import type { langKey } from 'langs';
+import loadLangDB from 'langs';
+import RootLayout from 'RootLayout.astro';
+import { get_current_locale } from 'tools/i18n';
+export { getStaticPaths } from 'tools/i18n/get_static_paths';
+
+const locale = get_current_locale(Astro.params.lang!) as langKey;
+const lekh = loadLangDB(locale)!.main;
+
+const {
+  features: { lekhan_sahayika, brahmic_support, phonetic_table, parivartak }
+} = lekh;
+---
+
+<RootLayout
+  title={`${lekh.title[0]} | ${lekh.title[1]}`}
+  className="bg-gradient-to-r from-zinc-200 to-gray-200"
+  metaTags={{
+    description: lekh.description,
+    title: `${lekh.title[0]} | ${lekh.title[1]}`
+  }}
+>
+  <h1 class="text-center text-3xl font-bold">
+    <span
+      set:html={lekh.title[0]}
+      class="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent"
+    />
+  </h1>
+  <main class="link_underline">
+    <h1 set:html={lekh.features.name} class="mb-2 text-3xl font-bold text-black" />
+    <div>
+      <h2 class="block text-2xl font-bold text-zinc-700" set:html={lekhan_sahayika.title} />
+      <p set:html={lekhan_sahayika.lekh_md} class="text-slate-700" />
+    </div>
+    <div>
+      <h2 set:html={phonetic_table.title} class="block text-2xl font-bold text-zinc-700" />
+      <p set:html={phonetic_table.lekh_md} class="text-slate-700" />
+    </div>
+    <div>
+      <h2 set:html={brahmic_support.title} class="block text-2xl font-bold text-zinc-700" />
+      <p set:html={brahmic_support.lekh_md} class="text-slate-700" />
+    </div>
+    <div>
+      <h2 set:html={parivartak.title} class="block text-2xl font-bold text-zinc-700" />
+      <p set:html={parivartak.lekh_md} class="text-slate-700" />
+    </div>
+  </main>
+</RootLayout>
+<style>
+  .link_underline :global(div) > :global(h2) + :global(p) :global(a) {
+    @apply underline;
+  }
+</style>

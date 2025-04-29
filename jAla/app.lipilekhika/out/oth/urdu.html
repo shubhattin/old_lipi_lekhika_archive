@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उर्दूलिपिज्ञातोपकरणम्</title>
+</head>
+
+<body>
+    <style>
+        html {
+            background-color: #f8f8fa;
+        }
+
+        textarea {
+            display: block;
+            outline: none;
+            background-color: rgb(236, 251, 251);
+            width: 90vw;
+            height: 40vh;
+            border: 3px solid black;
+            border-radius: 5px;
+            margin-bottom: 6px;
+            margin-top: 6px;
+            font-size: 30px;
+        }
+
+        textarea:focus {
+            border-color: blue;
+        }
+
+        #spl {
+            margin-left: 10px;
+        }
+
+        #img {
+            max-width: 98%;
+            overflow: scroll;
+        }
+    </style>
+    <h1 style="color:red;text-align: center;" class="t">اُردُولِپِجڃاتاوپَکَرَݨَم</h1>
+    <textarea id="from" class="t Lipi-LekhikA" lipi-lang=Urdu placeholder="Enter text"
+        dir="rtl">پرَݨَمامیَہَم</textarea>
+    <div>
+        <button id="splt">अक्षरों को विभाक्त करें</button>
+        <select id="font">
+            <option value="Calibri" selected>Calibri</option>
+            <option value="urdu">Noto Sans</option>
+        </select>
+        <button id="anu">अनुवाद एवं श्रवण</button>
+        <button id="lipi">लिपि लेखिका</button>
+    </div>
+    <textarea id="to" class="t" readonly dir="rtl"></textarea>
+    <div id="li" style="display:none;">
+        <button id="convert">लिप्यान्तरण</button>
+        <textarea id="lipitext"></textarea>
+    </div>
+    <div id="img">
+        <img src="/img/lang/Urdu.png" width="472.68px" height="645.84px">
+    </div>
+    <script src="/src/query.js"></script>
+    <script src="a.js"></script>
+</body>
+
+</html>

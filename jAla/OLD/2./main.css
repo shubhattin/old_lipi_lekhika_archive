@@ -1,0 +1,113 @@
+body {
+    background-color: #fdfb8b;
+    font-family: "Nirmala UI";
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 6px;
+    color: #ff0606;
+    background-color: #c5f714;
+}
+
+.btnm {
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid rgb(32, 11, 11);
+    color: #d31717;
+    background-color: #1cf1f1;
+}
+
+textarea#dev {
+    background-color: #fceeee;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 3px solid rgb(32, 11, 11);
+    word-wrap: break-word;
+    width: 92vw;
+    height: 38vh;
+    resize: none;
+    font-family: "Nirmala UI";
+}
+textarea#code {
+    background-color: #fceeee;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 3px solid rgb(32, 11, 11);
+    word-wrap: break-word;
+    width: 92vw;
+    height: 38vh;
+    resize: none;
+    font-family: "Nirmala UI";
+}
+
+textarea#dynamic {
+    background-color: #e3faf7;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 3px solid black;
+    word-wrap: break-word;
+    width: 92vw;
+    height: 62vh;
+    resize: none;
+    font-family: "Nirmala UI";
+}
+
+label#l1,
+label#l2,
+label#l3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+p#about_text {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+p#paricaya{
+    color: rgb(253, 9, 9);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+p.up {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #3b07f7;
+}
+
+label#lk {
+    font-size: 22px;
+    font-weight: bolder;
+    color: rgb(255, 74, 2);
+}
+
+button#kl {
+    font-weight: bolder;
+    font-size: 22px;
+    padding: 2px 2px;
+    color: brown;
+    background-color: rgb(23, 238, 209);
+}
+
+div#0,
+div#1,
+div#2,
+div#3,
+div#4,
+div#5 {
+    visibility: hidden;
+}
+
+.km {
+    color: #fbff00;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #2b088d;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>देवनागरी लेखिका</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+        let code_text = "",
+            dev_text = "",
+            dynamic_text = "",
+            dev_num = false;
+
+        function change(target) {
+            document.getElementById("bdy").innerHTML = html_data[target];
+        }
+    </script>
+    <style></style>
+</head>
+
+<body id="bdy"></body>
+<div id="0">
+    <div>
+        <button class="btn">मुख्य</button>
+        <button class="btn" onclick="change(1)">प्रयोग विधि</button>
+        <button class="btn" onclick="change(2)">ऐप परिचय</button>
+    </div><br>
+    <div id="mode"></div>
+</div>
+<div id="1">
+    <style>
+        hj {
+            font-weight: bold;
+            color: rgb(26, 116, 6);
+            font-size: larger;
+        }
+    </style>
+    <div>
+        <button class="btn" onclick="change(0);change_mode_text(1);">मुख्य</button>
+        <button class="btn">प्रयोग विधि</button>
+        <button class="btn" onclick="change(2)">ऐप परिचय</button>
+    </div><br>
+    <label for="kl" id="lk">परिवर्तन सूची अवश्य<br> देखें तब नीचे पढ़ें</label>
+    <button id="kl" onclick="change(3)">यहाँ दबाएं</button>
+    <div>
+        <h2>
+            उपर्युक्त सूची के मुख्य अंश :- <br>
+            1 - व्यंजनों को लिखना
+        </h2>
+        <p class="up">
+            व्यंजन के कोड को स्वतंत्र रूप मे लिखने से उसमे हलंत लग जता है ।
+            इसे हटाने के लिये उसके आगे 'मत्रा' लगाना आवश्यक है । <br><br>
+            Input: k kh kSh tr jY shr Dx jz <br>
+            Output: क् ख् क्ष् त्र् ज्ञ् श्र् ड़् ज़् <br>
+        </p>
+        <h2>
+            2 - स्वर / मात्रा एवं पूर्ण विराम
+        </h2>
+        <p class="up">
+            स्वर के कोड को लिखने पर यदि उसके पहले कोइ व्यंजन होगा तो वह उससे मिल जाएगा अंयथा स्वतंत्र रहेग ।<br>
+            पूर्ण विराम(।) . से लिखा जाएगा और पद विराम(॥) .. से । <br><br>
+            Input: A kA jza ka AUM RR R kR F DAW . .. <br>
+            Output: आ का ज़ क ॐ ॠ ऋ कृ ऽ डॉ । ॥<br>
+        </p>
+        <h2>उदाहरण</h2>
+        <p style="font-weight: bold;color: rgb(146, 22, 119);font-size: 21px;">
+            <hj>सांकेतिक कोड<br></hj>
+            1 - AUM shrI paramAtmane namaH<br>
+            2 - DAWkTara ke pAsa jAo .<br>
+            3 - khilADxI ne achchhA pradarshana kiyA <br>
+            4 - jzarA idhara to Aie .<br>
+            5 - aMya udAharaNa - F, dinAGka, Dhxa, jza, khza, R, RR, kR, kRR, pra, rpa, Ycha
+            <br>
+        </p>
+        <p style="font-weight: bold;color: rgba(216, 7, 7, 0.945);font-size: 21px;">
+            <hj>देवनागरी लेख<br></hj>
+            1 - ॐ श्री परमात्मने नमः <br>
+            2 - डॉक्टर के पास जाओ ।<br>
+            3 - खिलाड़ी ने अच्छा प्रदर्शन किया । <br>
+            4 - ज़रा इधर तो आइए ।<br>
+            5 - अंय उदाहरण - ऽ, दिनाङ्क, ढ़, ज़, ख़, ऋ, ॠ, कृ, कॄ, प्र, र्प, ञ्च<br>
+        </p>
+    </div>
+</div>
+<div id="2">
+    <div>
+        <button class="btn" onclick="change(0);change_mode_text(1);">मुख्य</button>
+        <button class="btn" onclick="change(1)">प्रयोग विधि</button>
+        <button class="btn">ऐप परिचय</button>
+    </div><br>
+    <p id="about_text">
+        यह अनुप्रयोग हिन्दी, संस्कृत या किसी भी देवनागरी लिपि पर आधारित भाषा को लिखने के लिए है ।
+        यह सामान्य प्रयोग के लिए ही बनाया गया है परन्तु फिर भी यह अत्यन्त सटीक एवं सरल है ।
+        एस अनुप्रयोग के कम्प्यूटर के संस्क्तरण के लिए नीचे दिए गए वेबसाइट पर जाएँ ।
+        कम्प्यूटर का संस्क्तरण का वास्तविक प्रयोग किया जा सकता है जो इस संस्क्तरण का नहिं किया जा सकता ।
+        उस ऐप आप कंप्यूटर मे कहीं भी प्रयोग कर सकते हैं जैसे-MS Word,Excel,Noptepad,Poweroint इत्यादी ।
+    </p>
+    <p id ="paricaya"><br>
+        E-mail : devanagaritool@gmail.com <br>
+        Website : <a href="https://bit.ly/DEVweb" style="color: #1e8d08;">bit.ly/DEVweb</a><br>
+        भारतीयेनैव शुभमानन्दगुप्तेन भारतैव विरचिता
+    </p>
+
+</div>
+<div id="3">
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            text-align: left;
+            color: orangered;
+        }
+
+        button {
+            background-color: yellow;
+            font-weight: bold;
+            font-size: 25px;
+            padding: 5px 5px;
+            color: orangered;
+        }
+    </style>
+    <h1>
+        परिवर्तन सूची
+    </h1>
+    <button class="btn"
+        onclick="if(dynamic_redirect_status){dynamic_redirect_status=false;change(0);change_mode_text(1);}else change(1);">
+        वापस जाएं</button><br>
+    <br><br><img src="sUcI.png"/>
+</div>
+<div id="4">
+    <button class="btnm" onclick="change_mode_text(2);">सामान्य प्रणाली मे बदलें</button><br><br>
+    <label for="dynamic" id="l3">यहाँ लिखें</label><br>
+    <textarea id="dynamic" oninput="display(3)"></textarea>
+    <button class="km" onclick="change(1);">यहाँ दबाकर प्रयोग विधि अवश्य पढ़ें</button>&nbsp;&nbsp;
+    <button class="km" onclick="change(3);dynamic_redirect_status=true">परिवर्तन सूची देखें</button>
+    <div style="font-size: 15px;font-weight: bold;">
+        नोट :- लिखित डेटा को बीच से संपादित न करें।<br>
+        यह दोनों काम सामान्य प्रणाली मे जाकर करें । 
+    </div>
+</div>
+<div id="5">
+    <button class="btnm" onclick="change_mode_text(1);">स्व परिवर्तित प्रणाली मे बदलें</button><br><br>
+    <label for="code" id="l1">सांकेतिक यहाँ</label><br>
+    <textarea id="code" oninput="display(1)" class="normal"></textarea><br>
+    <br><label for="dev" id="l2">देवनागरी यहाँ</label><br>
+    <textarea id="dev" oninput="display(2)" class="normal"></textarea>
+</div>
+<script src="main.js"></script>
+
+</html>

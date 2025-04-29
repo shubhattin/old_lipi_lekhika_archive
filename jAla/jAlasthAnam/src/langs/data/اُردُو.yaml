@@ -1,0 +1,20 @@
+main:
+  title:
+    - لِپِ لےکھِکآ
+    - لِکھےں بھَرَتاِییَ بھآشآےں پاُورݨَ گَتِ وَ ساُوکشمَتآ کے سآتھَ
+  description: ےکَ اُپَکَرَݨَ بھآرَتاِییَ بھآشآاوں کاو پاُورݨَ گَتِ ےوَں ساُوکشمَتآ
+    سے لِکھَنے کے لِے
+  features:
+    name: وِشےشَتآےں
+    lekhan_sahayika:
+      title: لےکھَنَ سَہآیِکآ
+      lekh_md: (features.lekhan_sahayika)
+    phonetic_table:
+      title: دھوَنیآتمَکَ پراَویاوگَ ساُوچِیآں
+      lekh_md: (features.phonetic_table)
+    brahmic_support:
+      title: سَبھاِی برآہمِکَ لِپِیآں اُپَلَبدھَ
+      lekh_md: (features.brahmic_support)
+    parivartak:
+      title: لِپِ پَرِوَرتَکَ
+      lekh_md: (features.parivartak)

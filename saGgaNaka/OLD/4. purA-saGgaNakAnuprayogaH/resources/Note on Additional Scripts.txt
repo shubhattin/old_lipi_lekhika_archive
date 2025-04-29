@@ -1,0 +1,11 @@
+• The Additional Scripts namely Brahmi, Sharada, Modi, Siddham and Granth, might not be supported properly.
+• To display These Scripts Properly Use These Fonts.
+      Sharada - Noto Sans Sharada
+      Modi - Noto Sans Modi
+      Siddham - Noto Sans Siddham
+      Granth - Noto Sans Granth
+      Brahmi - Noto Sans Brahmi
+• If you have problems typing these scripts in any application then Type them in notepad and then copy.
+• The Fonts for these scripts would have been installed if you used a setup a Lipi Lekhika, but if you are using portable version then you could get the fonts in "resources/fonts" folder of the Installation.
+• Use the Font "Agastya Sans" to display Tamil Extended using Malayalam Data.
+• So you could type something in Malayalam and then set the Font to Agastya Sans so as to display it in Tamil-Extended.
